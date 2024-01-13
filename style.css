@@ -55,8 +55,8 @@ nav a{
     font-weight: 600;
 }
 header .open-btn{
-    text-decoration: none;
     background-color: white;
+    text-decoration: none;
     color: black;
     padding: 10px;
     border-radius: 25px;
@@ -117,6 +117,10 @@ header .open-btn{
     font-size: 1.2rem;
     letter-spacing: -1px;
 }
+.sec1-btns a img{
+    width: 20px;
+    height: 20px;
+}
 .sec1-btns button{
     background-color: #23272a;
     padding: 0.9rem 1.5rem;
@@ -169,4 +173,85 @@ header .open-btn{
 }
 .section5 div:nth-child(3) div{
     background: url(images/ready-bg.svg) contain no-repeat;
+    margin-bottom: 20px;
+}       
+.section5 a{
+    text-decoration: none;
+    color: white;
+    background-color: #404eed;
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    width: 250px;
+    margin: 0 auto;
+}
+.section5 a img{
+    width: 20px;
+    height: 20px;
+}
+footer{
+    background-color: #23272a;
+}
+.footer-main{
+    width: 70%;
+    margin: 0 auto;
+    padding: 55px 0;
+
+}
+footer p{
+    color: #404eed;
+    margin-bottom: 30px;
+    font-size: smaller;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    font-size: smaller;
+}
+footer li{
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+footer .top-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 100px;
+}
+footer .lists{
+    display: flex;
+    gap: 0.4rem;
+}
+footer select{
+    background-color: #23272a;
+    /* outline: none; */
+    border: none;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+footer .socials{
+    display: flex;
+    gap: 25px;
+}
+footer .socials img{
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+footer .line{
+    border-top: 1px solid #404eed;
+    margin-bottom: 30px;
+}
+footer .last-box{
+    display: flex;
+    justify-content: space-between;
+}
+footer .open-btn{
+    background-color: #404eed;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 0.8em;
 }
