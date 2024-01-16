@@ -17,7 +17,7 @@ body{
     width: 100%;
 }
 header{
-    background-color: #404eed;
+    background: #404eed url(images/bg-img-for-desktop.png) no-repeat center center/ cover;
     overflow-x: hidden;
 }
 .nav-bar{
@@ -63,36 +63,18 @@ header .open-btn{
     font-size: 0.8em;
 }
 .section1{
-    padding-top: 160px;
-    position: relative;
-}
-.section1 .images{
+    padding: 90px 200px;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    width: 100%;
-}
-.section1 .images img{
-    width: 38rem;
-}
-.section1 .images img:nth-child(1){
-    margin-left: -170px;
-}
-.section1 .images img:nth-child(2){
-    margin-right: -140px;
+    justify-content: center;
+    align-items: center;
 }
 .section1 .sec-header{
-    width: 48%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    width: 43rem;
     text-align: center;
 }
 .section1 .sec-header .mainHeading h1{
     color: white;
-    font-size: 3.1rem;
+    font-size: 3.1rem; 
     line-height: 3.3rem;
     font-family: var(--nord);
     text-transform: uppercase;
@@ -108,6 +90,7 @@ header .open-btn{
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .sec1-btns a{
     text-decoration: none;
@@ -116,6 +99,7 @@ header .open-btn{
     border-radius: 30px;
     font-size: 1.2rem;
     letter-spacing: -1px;
+    text-align: center;
 }
 .sec1-btns a img{
     width: 20px;
@@ -254,4 +238,9 @@ footer .open-btn{
     padding: 10px;
     border-radius: 25px;
     font-size: 0.8em;
+}
+
+/* media for Ipads */
+@media only screen and (max-width: 960px){
+  
 }
