@@ -15,18 +15,18 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-x: hidden;
 }
 header{
     background: #404eed url(images/bg-img-for-desktop.png) no-repeat center center/ cover;
-    overflow-x: hidden;
 }
 .nav-bar{
     height: 70px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 9rem;
 }
 .logo{
     display: flex;
@@ -119,13 +119,16 @@ header .open-btn{
     justify-content: center;
     align-items: center;
     gap: 80px;
-    padding: 100px 0;
+    padding: 110px 0;
+}
+.section2 .sec2-img, .section3 .sec3-img, .section4 .sec4-img{
+    width: 42%;
 }
 .section2 img, .section3 img, .section4 img{
-    width: 38rem;
+    width: 100%;
 }
 .section2 .sec2-writeUp, .section3 .sec3-writeUp, .section4 .sec4-writeUp{
-    width: 23%;
+    width: 25%;
 }
 .section2 .sec2-writeUp h2, .section3 .sec3-writeUp h2, .section4 .sec4-writeUp h2{
     font-size: 2.5rem;
@@ -142,23 +145,34 @@ header .open-btn{
 .section5{
     background-color: #f6f6f6;
     text-align: center;
-    padding: 90px 0;
+    padding: 90px 35px;
+}
+.section5 .sec5-writeUp{
+    width: 68%;
+    margin: 0 auto;
 }
 .section5 h2{
     font-family: var(--nord);
-    font-size: 2.43rem;
+    font-size: 2.3rem;
     line-height: 2.3rem;
     font-weight: 600;
 }
 .section5 p{
     font-size: 1.04rem;
     line-height: 2rem;
-    padding: 0 270px;
 }
 .section5 div:nth-child(3) div{
-    background: url(images/ready-bg.svg) contain no-repeat;
-    margin-bottom: 20px;
-}       
+    margin: 35px 0;
+}  
+.section5 .ready{
+    background: url(images/ready-bg.svg) no-repeat center center/ contain;
+    padding: 40px 40px 0 40px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: fit-content;
+    margin: 0 auto 40px;
+
+}     
 .section5 a{
     text-decoration: none;
     color: white;
@@ -177,6 +191,7 @@ header .open-btn{
 }
 footer{
     background-color: #23272a;
+    padding: 0 40px;
 }
 .footer-main{
     width: 70%;
@@ -201,13 +216,13 @@ footer li{
 
 footer .top-footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
-    gap: 100px;
+    gap: 2rem;
 }
 footer .lists{
     display: flex;
-    gap: 0.4rem;
+    justify-content: space-around;
 }
 footer select{
     background-color: #23272a;
@@ -241,6 +256,28 @@ footer .open-btn{
 }
 
 /* media for Ipads */
-@media only screen and (max-width: 960px){
-  
+@media only screen and (max-width: 989px){
+    .section2 .sec2-img, .section3 .sec3-img, .section4 .sec4-img{
+        width: 40%;
+    }
+    .section2 .sec2-writeUp, .section3 .sec3-writeUp, .section4 .sec4-writeUp{
+        width: 40%;
+    }
+    .section5 .sec5-writeUp{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 569px){
+    .section2, .section3, .section4{
+        flex-direction: column;
+        gap: 30px;
+        padding: 110px 30px;
+    }
+    .section2 .sec2-img, .section3 .sec3-img, .section4 .sec4-img{
+        width: 100%;
+    }
+    .section2 .sec2-writeUp, .section3 .sec3-writeUp, .section4 .sec4-writeUp{
+        width: 100%;
+        text-align: center;
+    }
 }
