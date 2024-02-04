@@ -4,10 +4,7 @@ const mobileNav = document.querySelector('.mobile-nav');
 const safety = document.querySelector('.safety')
 const back = document.querySelector('.back');
 
-// hamburger.addEventListener('click', () => {
-//     mobileNav.style.display = "flex";
-//     console.log("clicked")
-// })
+// Mobile Navigation Click Events start
 window.addEventListener('click', (e) => {
     let target = e.target;
     if(target === hamburger){
@@ -15,19 +12,26 @@ window.addEventListener('click', (e) => {
         document.querySelector('body').style['overflow-y'] = "hidden";
         console.log("clicked");
     }
+    if(target !== mobileNav && target !== hamburger && target !== safety && target !== back){
+        mobileNav.style.display = "none";
+        document.querySelector('body').style['overflow-y'] = "scroll";
+    }
     if(target === cancel){
         mobileNav.style.display = "none";
+        document.querySelector('body').style['overflow-y'] = "scroll";
     }
     console.log(e)
 })
 safety.addEventListener('click', () => {
-    document.querySelector('.list').style.display ="none";
     document.querySelector('.mobile-nav-top').style.display ="none";
+    document.querySelector('.list').style.display ="none";
     document.querySelector('.safety-details').style.display ="block";
     back.style.display ="block";
 })
 back.addEventListener('click', () => {
+    document.querySelector('.mobile-nav-top').style.display ="flex";
     document.querySelector('.list').style.display ="block";
     document.querySelector('.safety-details').style.display ="none";
     back.style.display ="none";
 })
+// Mobile Navigation Click Events stop
