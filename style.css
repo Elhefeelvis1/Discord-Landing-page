@@ -11,6 +11,9 @@
     box-sizing: border-box;
     font-family: var(--workSans);
 }
+html{
+    width: 100vw;
+}
 body{
     margin: 0;
     padding: 0;
@@ -61,6 +64,10 @@ nav a{
     text-decoration: none;
     font-size: 0.9em;
     font-weight: 600;
+    margin-right: 30px;
+}
+.bl-btn{
+    transition: all ease-in-out 0.1s;
 }
 header .open-btn{
     background-color: white;
@@ -69,6 +76,14 @@ header .open-btn{
     padding: 10px;
     border-radius: 25px;
     font-size: 0.8em;
+}
+header .open-btn:hover{
+    box-shadow: 0 10px 20px #29339b;
+    color: #404eed;
+}
+header .open-btn:active{
+    box-shadow: 0 10px 20px #29339b;
+    color: #404eed;
 }
 header .bigHam{
     display: flex;
@@ -121,15 +136,21 @@ header .hamburger div{
 .mobile-nav .cancel{
     width: 25px;
     height: 25px;
-    background-color: red;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .mobile-nav .cancel div{
     border: 1px solid black;
+    width: 80%;
 }
 .mobile-nav .cancel .cancel1{
+    transform-origin: center 3px;
     transform: rotate(45deg);
 }
 .mobile-nav .cancel .cancel2{
+    transform-origin: center -1px;
     transform: rotate(-45deg);
 }
 .mobile-nav .list li{
@@ -171,9 +192,14 @@ header .hamburger div{
     border-radius: 25px;
     display: flex;
     justify-content: center;
-    align-items: center; 
     gap: 8px;
     margin-bottom: 50px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+.mobile-nav .side-bar-btn:hover{
+    transform: translate(0, -2px);
 }
 .mobile-nav .side-bar-btn img{
     width: 20px;
@@ -181,8 +207,6 @@ header .hamburger div{
 }
 .mobile-nav .side-bar-btn a{
     color: white;
-    font-size: 12px;
-    font-weight: 600;
 }
 .safety-details{
     overflow-y: scroll;
@@ -206,13 +230,13 @@ header .hamburger div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: max-content;
+    /* height: max-content; */
 }
 .sec1-bg-img{
     display: none;
 }
 .section1 .sec-header{
-    width: 43rem;
+    width: 60%;
     text-align: center;
 }
 .section1 .sec-header .mainHeading h1{
@@ -248,6 +272,14 @@ header .hamburger div{
     letter-spacing: -1px;
     text-align: center;
 }
+.sec1-btns .sec1-download:hover{
+    color: #404eed;
+    box-shadow: 0 10px 20px #29339b;
+}
+.sec1-btns .sec1-download:active{
+    color: #404eed;
+    box-shadow: 0 10px 20px #29339b;
+}
 .sec1-btns .sec1-download img{
     width: 20px;
     height: 20px;
@@ -260,6 +292,14 @@ header .hamburger div{
     color: white;
     border: none;
     letter-spacing: -1px;
+}
+.sec1-btns .sec1-app:hover{
+    color: #404eed;
+    box-shadow: 0 10px 20px #29339b;
+}
+.sec1-btns .sec1-app:active{
+    color: #404eed;
+    box-shadow: 0 10px 20px #29339b;
 }
 .section2, .section3, .section4{
     display: flex;
@@ -331,6 +371,14 @@ header .hamburger div{
     justify-content: center;
     width: 250px;
     margin: 0 auto;
+}
+.section5 a:hover{
+    box-shadow: 0 8px 3px 0 rgb(196, 196, 196);
+    background-color: #7681f5;
+}
+.section5 a:active{
+    box-shadow: 0 8px 3px 0 rgb(196, 196, 196);
+    background-color: #7681f5;
 }
 /* .sec5-img{
     width: fit-content;
@@ -408,14 +456,21 @@ footer .open-btn{
     border-radius: 25px;
     font-size: 0.8em;
 }
+footer .open-btn:hover{
+    background-color: #7681f5;
+}
+footer .open-btn:active{
+    background-color: #7681f5;
+}
 
 /* media for Ipads */
-@media only screen and (max-width: 1022px){
+@media screen and (max-width: 1022px){
     header{
         background: #404eed;
     }
     .nav-bar{
         width: 100%;
+        /* width: max-content; */
         padding: 0 25px;
         position: fixed;
         justify-content: space-between;
@@ -468,10 +523,7 @@ footer .open-btn{
         justify-content: flex-start;
     }
 }
-@media only screen and (max-width: 767px){
-    header{
-        background: #404eed;
-    }
+@media screen and (max-width: 767px){
     .section1{
         padding-bottom: 0;
         padding-left: 0;
@@ -494,7 +546,7 @@ footer .open-btn{
         width: 100%;
     }
 }
-@media only screen and (max-width: 569px){
+@media screen and (max-width: 569px){
     .section2, .section3, .section4{
         flex-direction: column;
         gap: 30px;
