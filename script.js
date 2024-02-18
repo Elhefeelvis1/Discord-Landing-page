@@ -8,16 +8,16 @@ const back = document.querySelector('.back');
 window.addEventListener('click', (e) => {
     let target = e.target;
     if(target === hamburger){
-        mobileNav.style.display = "flex";
+        mobileNav.style.transform = "translateX(0)";
         document.querySelector('body').style['overflow-y'] = "hidden";
         console.log("clicked");
     }
     if(target !== mobileNav && target !== hamburger && target !== safety && target !== back){
-        mobileNav.style.display = "none";
+        mobileNav.style.transform = "translateX(325px)";
         document.querySelector('body').style['overflow-y'] = "scroll";
     }
     if(target === cancel){
-        mobileNav.style.display = "none";
+        mobileNav.style.transform = "translateX(325px)";
         document.querySelector('body').style['overflow-y'] = "scroll";
     }
     console.log(e)
